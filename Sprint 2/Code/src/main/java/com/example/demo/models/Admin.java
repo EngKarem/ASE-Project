@@ -18,5 +18,8 @@ public class Admin {
         return password;
     }
 
-    public boolean isActivated(User user) { return !user.Verified.equals("Activated"); }
+    public void Activate(User user) { user.setActivateStat("Activated"); }
+
+    public boolean isActivated(User user) { return user.Verified.equals("Activated"); }
+
 }

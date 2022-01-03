@@ -3,15 +3,14 @@ package com.example.demo.models;
 public class User {
 
     int userid;
-    String username, mobileNumber, email, password, type, Verified, BirtDate;
-    public User(int id,String name, String email, String pass, String mobileNumber, String Type,String Date) {
+    String username, mobileNumber, email, password, type, Verified;
+    public User(int id,String name, String email, String pass, String mobileNumber, String Type) {
         this.userid = id;
         this.username = name;
         this.email = email;
         this.password = pass;
         this.mobileNumber = mobileNumber;
         this.type = Type;
-        this.BirtDate = Date;
         Verified = "Activated";
     }
 
@@ -34,10 +33,6 @@ public class User {
     public int getID()
     {
         return userid;
-    }
-    public String getBirtDate()
-    {
-        return BirtDate;
     }
 
     public void setActivateStat(String stat) {

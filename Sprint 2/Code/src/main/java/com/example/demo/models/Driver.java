@@ -5,8 +5,8 @@ public class Driver extends User{
     String driving_license ,nationalID;
     int AvgRate;
 
-    public Driver(int id,String username, String email, String pass, String mobileNumber,String Type,String Date,String driving_license, String nationalID) {
-        super(id,username, email, pass, mobileNumber,Type,Date);
+    public Driver(int id,String username, String email, String pass, String mobileNumber,String Type, String driving_license, String nationalID) {
+        super(id,username, email, pass, mobileNumber,Type);
         this.driving_license = driving_license;
         this.nationalID = nationalID;
         Verified = "Pending";

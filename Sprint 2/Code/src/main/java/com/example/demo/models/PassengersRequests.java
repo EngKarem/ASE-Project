@@ -1,24 +1,23 @@
 package com.example.demo.models;
 
-
 import java.time.LocalTime ;
 
 public class PassengersRequests {
 
     int RequestNum, PassengerNum;
-    String PassengerName,SrcName,DestName,Date;
+    String PassengerName,SrcName,DestName;
     public LocalTime  time;
     static int ReqNum = 0;
     String Stat;
-    public PassengersRequests(int PassengerNum,String PassengerName,String SrcName, String DestName,String Date) {
+    public PassengersRequests(int PassengerNum,String PassengerName,String SrcName, String DestName) {
         this.PassengerNum = PassengerNum;
+        this.RequestNum = ++ReqNum;
         this.PassengerName = PassengerName;
         this.SrcName = SrcName;
         this.DestName = DestName;
-        this.Date = Date;
-        this.RequestNum = ++ReqNum;
         this.Stat = "Waiting";
         time = LocalTime.now();
+
     }
 
     public String getPassengerName()
@@ -45,10 +44,9 @@ public class PassengersRequests {
     {
         this.Stat = Stat;
     }
-
-    public String getDate()
+    public String getStat()
     {
-        return Date;
+        return Stat;
     }
 
     @Override
@@ -62,4 +60,6 @@ public class PassengersRequests {
                         "\nDestination: " +DestName+
                         "\nRequest Time: " +time;
     }
+
+
 }
